@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* ==================== LIGHT THEME COLORS ==================== */
+  /* Background Colors */
+  --color-primary: #f8f9fa;
+  --color-secondary: #e9ecef;
+  --color-tertiary: #dee2e6;
+  --color-card: #ffffff;
+  --color-hover: #f1f3f4;
+
+  /* Text Colors */
+  --color-text-primary: #1a1a1a;
+  --color-text-muted: #495057;
+  --color-text-subtle: #adb5bd;
+
+  /* Border Colors */
+  --color-border-primary: #dee2e6;
+  --color-border-muted: #e9ecef;
+
+  /* Font Families */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ==================== DARK THEME OVERRIDES ==================== */
+.dark {
+  /* Background Colors */
+  --color-primary: #0a0a0a;
+  --color-secondary: #151515;
+  --color-tertiary: #1f1f1f;
+  --color-card: #252525;
+  --color-hover: #2a2a2a;
+
+  /* Text Colors */
+  --color-text-primary: #f8f9fa;
+  --color-text-muted: #e9ecef;
+  --color-text-subtle: #6c757d;
+
+  /* Border Colors */
+  --color-border-primary: #333333;
+  --color-border-muted: #444444;
+}
+
+/* ==================== BASE STYLES ==================== */
+body {
+  background: var(--color-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
