@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import LogoHeader from './media/LogoHeader.svg';
+import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   return (
@@ -19,8 +20,9 @@ export default function Header() {
           {/* Middle - Empty for now */}
           <div className="flex-1"></div>
 
-          {/* Login Button */}
-          <div>
+          {/* Theme Toggle and Login Button */}
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
             <button className="px-6 py-2 rounded-lg bg-secondary hover:bg-hover border border-border-primary transition-colors font-medium">
               Login
             </button>
